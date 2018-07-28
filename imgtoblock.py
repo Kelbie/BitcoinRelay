@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Distributed under the MIT software license
 import binascii, struct, sys
 from PIL import Image
 
