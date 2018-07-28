@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Distributed under the MIT software license
 import binascii, struct, sys
 from PIL import Image
 
@@ -10,6 +9,7 @@ imgdata = img.tobytes()
 
 metaheader = imgdata[0:8]
 (blocksize,crc) = struct.unpack('>II', metaheader)
+print('size {:d}×{:d}'.format(img.width, img.height))
 print('metaheader:')
 print('  size  : {:d}'.format(blocksize))
 print('  CRC32 : {:x}'.format(crc))
